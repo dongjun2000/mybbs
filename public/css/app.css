@@ -21125,6 +21125,7 @@ html {
 body {
   font-family: Helvetica, "Microsoft YaHei", Arial, sans-serif;
   font-weight: 14px;
+  padding-bottom: 80px;
 }
 
 .navbar-static-top {

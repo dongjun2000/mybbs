@@ -30,10 +30,10 @@
           </div>
           <div class="mb-4">
             <label for="" class="avatar-label form-label">用户头像</label>
-            <input type="file" name="avatar" class="form-control">
+            <input type="file" name="avatar" class="form-control" onchange="showPreview(this)">
             @if ($user->avatar)
               <br>
-              <img class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200">
+              <img id="avatar-preview" class="thumbnail img-responsive" src="{{ $user->avatar }}" width="200">
             @endif
           </div>
           <div class="well well-sm">
@@ -43,4 +43,22 @@
       </div>
     </div>
   </div>
+@stop
+
+@section('scripts')
+  <script>
+    // 上传头像预览
+    function showPreview(source) {
+      var file = source.files[0];
+      if (window.FileReader) {
+        var fr = new FileReader();
+        var avatar_preview = document.getElementById("avatar-preview");
+        fr.onloadend = function (e) {
+          avatar_preview.src = e.target.result;
+        }
+        fr.readAsDataURL(file);
+        avatar_preview.style.display = 'block';
+      }
+    }
+  </script>
 @stop
