@@ -9,6 +9,7 @@
   <meta name="csrf-token" content={{ csrf_token() }}>
 
   <title>@yield('title', 'MyBBS') - 我的地盘，听我说！</title>
+  <meta name="description" content="@yield('description', 'MyBBS 我们的社区')">
 
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
