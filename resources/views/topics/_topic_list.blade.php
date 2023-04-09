@@ -10,10 +10,10 @@
 
         <div class="flex-grow-1 ms-2">
           <div class="mt-0 mb-1">
-            <a href="{{ route('topics.show', $topic) }}" title="{{ $topic->title }}">
+            <a href="{{ $topic->link() }}" title="{{ $topic->title }}">
               {{ $topic->title }}
             </a>
-            <a href="{{ route('topics.show', $topic) }}" class="float-end">
+            <a href="{{ $topic->link() }}" class="float-end">
               <span class="badge bg-secondary rounded-pill">{{ $topic->reply_count }}</span>
             </a>
           </div>
