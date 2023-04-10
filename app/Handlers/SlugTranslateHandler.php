@@ -8,7 +8,7 @@ use Illuminate\Support\Str;
 
 class SlugTranslateHandler
 {
-    public function translare($text)
+    public function translate($text)
     {
         // 实例化 HTTP 客户端
         $http = new Client();
