@@ -12,6 +12,8 @@
   <meta name="description" content="@yield('description', 'MyBBS 我们的社区')">
 
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+  @yield('styles')
 </head>
 <body>
   <div id="app" class="{{ route_class() }}-page">
