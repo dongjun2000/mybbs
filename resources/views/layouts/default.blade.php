@@ -8,9 +8,9 @@
   <!-- CSRF Token -->
   <meta name="csrf-token" content={{ csrf_token() }}>
 
-  <title>@yield('title', 'MyBBS') - 我的地盘，听我说！</title>
-  <meta name="description" content="@yield('description', 'MyBBS 我们的社区')">
-
+  <title>@yield('title', 'MyBBS') - {{ setting('site_name', '我的地盘，听我说！') }}</title>
+  <meta name="description" content="@yield('description', setting('seo_description', 'MyBBS 我们的社区'))">
+  <meta name="keyword" content="@yield('keyword', setting('seo_keyword', 'MyBBS,分享,有趣,生活'))">
   <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 
   @yield('styles')
